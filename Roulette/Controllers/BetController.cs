@@ -9,7 +9,7 @@ namespace Roulette.Controllers
     [Route("api/[controller]")]
     public class BetController : Controller
     {
-        // GET: api/Bet
+        // GET: api/Bet/CloseBets/{rouletteId}
         [HttpGet("CloseBets/{rouletteId}")]
         public IEnumerable<string> Get(int rouletteId)
         {
@@ -81,6 +81,7 @@ namespace Roulette.Controllers
                 else
                     results.Add($"La apuesta {bet.BetId} del usuario {bet.UserId} ha ganado {earnedMoney} para un total de { bet.Money + earnedMoney }");
             }
+
             return results;
         }
     }

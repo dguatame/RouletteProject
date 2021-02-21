@@ -18,6 +18,8 @@ namespace Roulette.Models
             RouletteModel roulette = rouletteRepository.GetRouletteById(rouletteId: RouletteId);
             if (roulette.RouletteId == 0)
                 return false;
+            if (!roulette.IsOpen)
+                return false;
             if (UserId == 0)
                 return false;
             if (Number < 0 || Number > 36)

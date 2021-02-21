@@ -13,6 +13,7 @@ namespace Roulette.Controllers
         public IEnumerable<RouletteModel> Get()
         {
             RouletteRepositorySQL rouletteRepository = new RouletteRepositorySQL();
+
             return rouletteRepository.GetAllRoulettes();
         }
         // POST api/Roulette/AddRoulette
@@ -22,6 +23,7 @@ namespace Roulette.Controllers
             RouletteModel roulette = new RouletteModel { IsOpen = false };
             RouletteRepositorySQL rouletteRepository = new RouletteRepositorySQL();
             int rouletteId = rouletteRepository.AddRoulette(roulette: roulette);
+
             return rouletteId;
         }
         // PUT api/Roulette/OpenRoulette/5
