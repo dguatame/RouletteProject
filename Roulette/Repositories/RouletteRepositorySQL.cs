@@ -23,13 +23,11 @@ namespace Roulette.Repositories
             try
             {
                 int rouletteId = Convert.ToInt32(cmd.ExecuteScalar());
-
                 return rouletteId;
             }
             catch (Exception ex)
             {
                 //todo: implementar logs;
-
                 return 0;
             }
             finally
@@ -64,7 +62,6 @@ namespace Roulette.Repositories
             catch (Exception ex)
             {
                 //todo: implementar logs;
-
                 return roulette;
             }
             finally
@@ -84,13 +81,11 @@ namespace Roulette.Repositories
             try
             {
                 int rouletteId = cmd.ExecuteNonQuery();
-
                 return rouletteId != 0;
             }
             catch (Exception ex)
             {
                 //todo: implementar logs;
-
                 return false;
             }
             finally
@@ -119,13 +114,11 @@ namespace Roulette.Repositories
                         IsOpen = (bool)reader["IsOpen"]
                     });
                 }
-
                 return roulettes;
             }
             catch (Exception ex)
             {
                 //todo: implementar logs;
-
                 return null;
             }
             finally

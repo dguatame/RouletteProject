@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Roulette.Models;
-
 namespace Roulette.Contracts
 {
     public interface IRouletteRepository
